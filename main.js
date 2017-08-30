@@ -20,11 +20,23 @@ function randomDraftOrder(array) {
 let theLeague = ["Jake", "Jack", "Kathy", "David", "Tonya", "Karen", "Scott", "Vanessa", "Michael", "Matthew"];
 
 $("#randomize").click(function () {
+  $("#opening-theme")[0].pause();
+  $("#closing-theme")[0].play();
+
   let html = '';
   let orderedLeague = randomDraftOrder(theLeague);
+  let i = 0;
+  let count = 10;
+
   orderedLeague.forEach(function(player) {
-    let listItem = `<li>${player}</li>`;
+    let listItem = `<li id="order-${i}" style="display: none">${i+1}. ${player}</li>`;
     html += listItem;
+    i++;
   });
   $("#draft-list").html(html);
+  setInterval(function(){
+    $(`#order-${count}`).removeAttr("style");
+    count--;
+  }, 2000)
+
 })
