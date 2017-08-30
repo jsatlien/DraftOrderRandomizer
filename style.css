@@ -1,18 +1,44 @@
+@font-face {
+  font-family: "NFL";
+  src: url('NFLRedzone.ttf') format("truetype");
+}
+
 body {
   background-image: url('http://blog.360i.com/wp-content/uploads/2014/05/NFL-draft.jpg');
 }
 
-ol, li, h1 {
+ul, li, h1, h2, h3 {
   color: white;
   font-family: sans-serif;
   font-weight: bold;
 }
 
-ol {
-  margin: 20px;
+h1, h2, h3 {
+   -webkit-text-stroke: 1px black;
+   font-family: "NFL";
+   margin-bottom: 20px;
+   margin-top: 10px;
+   display: inline;
+}
+
+#u {
+  color: red;
+}
+
+#f {
+  color: blue;
+}
+ul {
+  list-style: none;
+
 }
 li {
-  font-size: 16pt;
+  font-size: 12pt;
+  padding: 5px;
+  background-color: black;
+  width: 150px;
+  border-radius: 30px;
+  margin: 5px;
 }
 
 
@@ -55,6 +81,7 @@ button {
 }
 
 button {
+  margin-left: 40px;
   -webkit-animation: glowing 1500ms infinite;
   -moz-animation: glowing 1500ms infinite;
   -o-animation: glowing 1500ms infinite;
