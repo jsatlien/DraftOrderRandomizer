@@ -87,3 +87,21 @@ button {
   -o-animation: glowing 1500ms infinite;
   animation: glowing 1500ms infinite;
 }
+
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+  button {
+    height: 200px;
+    width: 400px;
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+  li {
+    height: 70px;
+    width: 400px;
+    font-size: 40px;
+    padding: 5px;
+  }
+}
